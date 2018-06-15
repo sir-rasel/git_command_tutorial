@@ -1,0 +1,112 @@
+﻿Git and (Github/Gitlab/Bitucket) Tutorial
+
+Work-flow : 
+
+(working directory → stage area → git repository → hosting repository)
+
+* git config –global user.name “name” / git config user.name “name”
+* git config –globaluser.email “email” / git config user.email “email”
+* git help
+
+1. git init
+	→ It used only at the beginning of a project to initialize our 
+	  working directory so that git can tracked our file changes. 
+	  Remember that it used just one time at the beginning. 
+
+2. git add “filename”(for specific file) / 
+   git add –all/ git add .(for all file)
+	→ It used for tell the git to add a untracked file and keep eye on 
+	  it. It take the files on the stage area for further processing.
+
+3. git commit -m “massage” filename / git commit -am “massage”
+	→ It used to take the file as a version with a massage on git 
+	  repository and save file state.
+
+4. git status
+	→ It used to check the present state of our working directory and 
+	  stage area. It tells about files of those directory is file 
+	  commit or not.
+
+5. git log / git log filename
+	→ It used to see the all version or state of our project with 
+	  commit massage. (look there have some unique hash code).
+
+6. git show / git show master/ git show HEAD/ git show “hashcode”
+	→ It show the changes or working activities into our file 
+	  what we done that time.
+
+7. git diff/ git diff HEAD/ git diff master/ git diff hashcode hashcode
+	→ It show us the changes of log to log or commit to commit, and it 
+	  also show the difference between two state of our files.
+
+8. git checkout hashcode/ git checkout master
+	→ It back our whole project working pointer as our need and after 
+	  work back to head or master.
+
+9. git checkout hashcode filename/ git checkout master -f
+	→ It back a single or specific file working pointer as our need and 	  after work back to head or master.
+
+10. git reflog
+	→ It show our working activity in our project.(Look refcode).
+
+11. git reset –soft hashcode/ git reset –hard hash code
+	→ It remove our commit.
+
+
+12. git reset refcode/ git reset --hard git reset –soft
+	→ It also remove our activity in this refcode.
+
+(Point to remember that if we push our project we can not reset our
+ commit)
+
+13. git commit –amend
+	→ it amend our change with current commit.
+
+14. git stash
+	→ Save the project state temporarily.
+
+15. git stash list
+	→ show the temporarily save state. (look the stashcode)
+
+16. git stash pop/ git stash apply
+	→ Go to the recent stash state of our project.
+
+17. git stash pop stashcode/ git stash apply stashcode
+	→ Goto the stashcode state of our project.
+
+18. git stash clear
+	→ Remove all stash state of our project
+
+19. git clean -f -n/ git clean -f
+	→ Remove all untracked file with dry run and without dry run.
+
+20. git remote add origin URL or SSH
+	→ Make a connection with git repository and hosting repository.
+
+21. git push origin branch
+	→ Give our project to the server host.
+
+22. git pull origin master
+	→ Take the project change from hosting server.
+
+23. git clone URL or SSH
+	→ To contribute open source project, it give you a copy of this
+	  project.
+
+24. git fetch
+	→ Give the access of the hosting repository .
+
+25. git branch
+	→ It show the branch list. And with * is the current branch.
+
+26. git branch “branchname”
+	→ It creates a new brach.
+
+27. git checkout “branchname”
+	→ It took the access into this branch.
+
+28. git merge “branchname”
+	→ It merge the branch with current one.
+
+29. git branch -d “branchname”
+	→ It delete the branch.
